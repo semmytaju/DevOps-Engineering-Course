@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		// handle mouse over
+		$("p").mouseover(function(){
+			$("p").css("background-color", "yellow");
+		});
+		
+		// handle mouse out
+		$("p").mouseout(function(){
+			$("p").css("background-color", "lightgray");
+		});
+	});
+</script>
+</head>
+<body>
+	<p>Gerakkan mouse pointer ke paragraf ini.</p>
+</body>
+</html>

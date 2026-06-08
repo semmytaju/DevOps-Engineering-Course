@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<script data-require="angular.js@1.0.7" data-semver="1.0.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<script src="myscripts.js"></script>
+	</head>
+	<body>
+		<h1>AngularJS Demo Calculator</h1>
+		<div ng-controller="CalculatorCtrl">
+		  <table style="border-spacing: 10px;">
+			<tr>
+			  <td>Input Variable a =</td>
+			  <td><input ng-model="var_a"></td>
+			  <td>
+				<button class="command" ng-click="increase_var_a()">+1</button>
+				<button class="command" ng-click="decrease_var_a()">-1</button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Operation:</td>
+			  <td>
+				<select ng-model="operation_1">
+				  <option value="+">(+) Penjumlahan</option>
+				  <option value="-">(-) Pengurangan</option>
+				  <option value="*">(*) Perkalian</option>
+				  <option value="/">(/) Pembagian</option>
+				</select>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Input Variable b =</td>
+			  <td><input ng-model="var_b"></td>
+			  <td>
+				<button class="command" ng-click="increase_var_b()">+1</button>
+				<button class="command" ng-click="decrease_var_b()">-1</button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Operation:</td>
+			  <td>
+				<select ng-model="operation_2">
+				  <option value="+">(+) Penjumlahan</option>
+				  <option value="-">(-) Pengurangan</option>
+				  <option value="*">(*) Perkalian</option>
+				  <option value="/">(/) Pembagian</option>
+				</select>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Input Variable c =</td>
+			  <td><input ng-model="var_c"></td>
+			  <td>
+				<button class="command" ng-click="increase_var_c()">+1</button>
+				<button class="command" ng-click="decrease_var_c()">-1</button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Operation:</td>
+			  <td>
+				<select ng-model="operation_3">
+				  <option value="+">(+) Penjumlahan</option>
+				  <option value="-">(-) Pengurangan</option>
+				  <option value="*">(*) Perkalian</option>
+				  <option value="/">(/) Pembagian</option>
+				</select>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Input Variable d =</td>
+			  <td><input ng-model="var_d"></td>
+			  <td>
+				<button class="command" ng-click="increase_var_d()">+1</button>
+				<button class="command" ng-click="decrease_var_d()">-1</button>
+			  </td>
+			</tr>
+		  </table>
+		  <div style="padding-left: 5px;">
+			<br/><strong>Output:</strong><br/>
+			<b class="result">{{update_a()}} {{operation_1}} {{update_b()}} {{operation_2}} {{update_c()}} {{operation_3}} {{update_d()}} = {{calculate()}}</b>
+		  </div>
+		</div>
+	</body>
+</html>

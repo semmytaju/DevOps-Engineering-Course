@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background:#98bf21;
+  height:100px;
+  width:200px;
+  position:absolute;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script> 
+	$(document).ready(function(){
+		// handle click button
+		$("button").click(function(){
+			var div = $("#id-test");
+			div.animate({height: '300px', opacity: '0.4'}, "slow");
+			div.animate({width: '300px', opacity: '0.8'}, "slow");
+			div.animate({height: '100px', opacity: '0.4'}, "slow");
+			div.animate({width: '100px', opacity: '0.8'}, "slow");
+		});
+	});
+</script> 
+</head>
+<body>
+	<button>Start Animation</button>
+	<div id="id-test"></div>
+</body>
+</html>
